@@ -42,7 +42,7 @@ public class RNInstalledApplicationModule extends ReactContextBaseJavaModule {
   public void getApps(Promise promise) {
     try {
       PackageManager pm = this.reactContext.getPackageManager();
-      List<PackageInfo> pList = pm.getInstalledPackages(0);
+      List<PackageInfo> pList = pm.getInstalledPackages(PackageManager.PackageInfoFlags.of(0));
       WritableArray list = Arguments.createArray();
       for (int i = 0; i < pList.size(); i++) {
         PackageInfo packageInfo = pList.get(i);
