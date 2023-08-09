@@ -20,9 +20,6 @@
     "url": "https://daridasar.com"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "react-native": "^0.71.8",
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danilrafiqi/react-native-installed-application.git"
