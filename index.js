@@ -1,25 +1,6 @@
+import { requireNativeModule } from 'expo-modules-core';
 
-import { NativeModules } from 'react-native';
+// It loads the native module object from the JSI or falls back to
+// the bridge module (from NativeModulesProxy) if the remote debugger is on.
+export default requireNativeModule('RNInstalledApplication');
 
-const { RNInstalledApplication } = NativeModules;
-
-
-const getApps = () => {
-    return RNInstalledApplication.getApps();
-}
-const getNonSystemApps = () => {
-    return RNInstalledApplication.getNonSystemApps();
-}
-const getSystemApps = () => {
-    return RNInstalledApplication.getSystemApps();
-}
-const isPackageInstalled = (packageName) => {
-    return RNInstalledApplication.isPackageInstalled(packageName);
-}
-
-export default {
-    getApps,
-    getNonSystemApps,
-    getSystemApps,
-    isPackageInstalled,
-};
